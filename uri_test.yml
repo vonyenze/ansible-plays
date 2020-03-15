@@ -2,9 +2,12 @@
 
 - hosts: localhost
   gather_facts: false
+  vars:
+    web_url: ""
 
   tasks:
   - name: check url
     uri:
-      url: https://www.google.com
+      url: "{{ item }}"
       validate_certs: no
+    with_items: "{{ web_url }}"
