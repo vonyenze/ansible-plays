@@ -1,9 +1,7 @@
 ---
 
-- hosts: localhost
+- hosts: all
   gather_facts: false
-  vars:
-    web_url: ""
 
   tasks:
   - name: check url
