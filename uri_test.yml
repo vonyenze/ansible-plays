@@ -1,0 +1,10 @@
+---
+
+- hosts: localhost
+  gather_facts: false
+
+  tasks:
+  - name: check url
+    uri:
+      url: https://www.google.com
+      validate_certs: no
